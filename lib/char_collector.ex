@@ -15,6 +15,6 @@ defmodule CharCollecter do
   end
 
   defp getSpecialChars do
-    "!#$%&*+-./=?@_"
+    "!#$%&*+-./=?@_!#$%&*+-./=?@_!#$%&*+-./=?@_"
   end
 end

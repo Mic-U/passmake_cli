@@ -11,6 +11,6 @@ defmodule CharCollectorTest do
   end
 
   test "get Alphanumerics and Special characters" do
-    assert CharCollecter.collect(true) == "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&*+-./=?@_"
+    assert CharCollecter.collect(true) == "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&*+-./=?@_!#$%&*+-./=?@_!#$%&*+-./=?@_"
   end
 end
