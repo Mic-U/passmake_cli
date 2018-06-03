@@ -25,7 +25,18 @@ defmodule Passmake do
 
   def process(:help) do
     IO.puts """
-    usage: passmake --length <length>
+    Make random string.
+    By default, using alphanumerics.
+
+    Usage: passmake --length <length> [--special]
+
+    Options:
+
+    --length, -l <length>
+      Define length of random string.
+
+    --special, -s
+      Use special chars [! # $ % & * + - . / = ? @ _]
     """
 
     System.halt(0)
