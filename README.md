@@ -1,21 +1,43 @@
 # Passmake
 
-**TODO: Add description**
+Create random string used for a password for example.
+
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `passmake` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:passmake, "~> 0.1.0"}
-  ]
-end
+```
+git clone git@github.com:Mic-U/passmake_cli.git
+mix do escript.build, escript.install
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/passmake](https://hexdocs.pm/passmake).
+## Usage
 
+```
+By default, using alphanumerics.
+
+Usage: passmake --length <length> [--special]
+
+Options:
+
+--length, -l <length>
+  Define length of random string.
+
+--special, -s
+  Use special chars [! # $ % & * + - . / = ? @ _]
+```
+
+## example
+
+### Default
+
+```
+$ passmake -l 15
+9a4RzEWLupBkGFV
+```
+
+### With Spacial Chars
+
+```
+$ passmake -l 15 -s
+#2_oWh3EPW6@-Pm
+```
