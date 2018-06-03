@@ -7,6 +7,7 @@ Create random string used for a password for example.
 
 ```
 git clone git@github.com:Mic-U/passmake_cli.git
+export PATH=$HOME/.mix/escripts:$PATH
 mix do escript.build, escript.install
 ```
 
