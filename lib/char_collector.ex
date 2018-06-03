@@ -4,14 +4,17 @@ defmodule CharCollecter do
   end
 
   def collect(useSpecialChars) do
-    getAlphanumerics() <> getSpecialChars()
+    case useSpecialChars do
+      true -> getAlphanumerics() <> getSpecialChars()
+      _ -> getAlphanumerics()
+    end
   end
 
-  def getAlphanumerics do
+  defp getAlphanumerics do
     "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
   end
 
-  def getSpecialChars do
+  defp getSpecialChars do
     "!#$%&*+-./=?@_"
   end
 end
