@@ -1,18 +1,27 @@
 defmodule Passmake do
   @moduledoc """
-  Documentation for Passmake.
+  Main Module.
   """
 
-  @doc """
-  Hello world.
+  def main(argv) do
+    parseArgs(argv)
+    |> process
+  end
 
-  ## Examples
+  def parseArgs(argv) do
+    parse = OptionParser.parse(argv, switches: [help: :boolean], aliases: [h: :help])
+    case parse do
+      {[help: true], _, _}
+        -> :help
+      _ -> :help
+    end
+  end
 
-      iex> Passmake.hello
-      :world
+  def process(:help) do
+    IO.puts """
+    usage: passmake --length <length>
+    """
 
-  """
-  def hello do
-    :world
+    System.halt(0)
   end
 end
